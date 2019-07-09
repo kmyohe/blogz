@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+            <link href="styles_signup.css" rel="stylesheet">
+        <h1>Sign Up</h1>
+        <form method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="username">Username</label>
+                        </td>
+                        <td>
+                            <input name="username" type="text" value="">
+                            <span class="error">{0}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password</label>
+                        </td>
+                        <td>
+                            <input name="password" type="password">
+                            <span class="error">{1}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="verify">Verify Password</label>
+                        </td>
+                        <td>
+                            <input name="verify" type="password">
+                            <span class="error">{2}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email (optioinal)</label>
+                        </td>
+                        <td>
+                            <input name="email" type="text" value="">
+                            <span class="error">{3}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit">
+        </form>
+    </body>
+</html>
