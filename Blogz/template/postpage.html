@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <h1>{{blog.blog_title}}</h1>
+    <p style="text-align: center;">author: <a href="/singleuser?id={{author.id}}">{{author.username}}</a></p>
+    <br>
+    <div><p>{{blog.blog_body}}</p></div>
+    
+    <hr>
+
+{% endblock %}

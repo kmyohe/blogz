@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post">
+        <label>Title for your new blog:
+            <br/>
+            <span class="error" style="color:red; font-size: 10px; font-family: fantasy; font-style: italic;">{{title_error}}</span>
+            <br>
+            <input class="textbox" type="text" name="blog_title" />            
+            
+        </label>
+        <br />
+        <label>Your new blog post:</label>
+        <br />
+        <span class="error" style="color:red; font-size: 10px; font-family: fantasy; font-style: italic;">{{body_error}}</span>
+            <br><textarea style="width: 500px; height: 300px" name="blog_body"></textarea>
+        
+    <br>
+    <br>
+    <input type="submit" value="Add Entry" />
+    </form>
+
+    <br>
+    <hr />
+{% endblock %}
