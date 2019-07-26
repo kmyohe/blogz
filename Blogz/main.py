@@ -47,17 +47,14 @@ def newpost():
     title_error=""
     body_error=""
     author = User.query.filter_by(username = session['username']).first()
-    # author_id = User.query.get(author)
 
     if request.method =='POST':
         blog_title = request.form["blog_title"]
         blog_body = request.form["blog_body"]
 
-        #Title Validation
         if blog_title == "":
             title_error = "Please Fill In The Title"
         
-        #Body Validation
         if blog_body == "":
             body_error = "Please Fill In The Body"
 
@@ -128,13 +125,6 @@ def singleuser():
 @app.route("/view")
 def view():
     return render_template("view.html")
-
-
-
-# @app.route("/", methods = ["GET"])
-# def blog():
-#     blogz = Blog.query.all()
-#     return render_template("view.html", title="Build-A-Blog", blogz=blogz)
 
 @app.route("/postpage")
 def postpage():
